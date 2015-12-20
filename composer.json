@@ -1,5 +1,5 @@
 {
-  "name": "c006/yii2-migration-utility",
+  "name": "choken/yii2-migration-utility",
   "description": "Automatically writes the create tables for migrations or create tables in general",
   "type": "yii2-extension",
   "keywords": [
@@ -13,6 +13,10 @@
     {
       "name": "Jon Chambers",
       "email": "jchambers.dev@gmail.com"
+    },
+    {
+      "name": "Kjell-Åke",
+      "email": "kjellake.lundblad@endlessdreams.biz"
     }
   ],
   "autoload": {
