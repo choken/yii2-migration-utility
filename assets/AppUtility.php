@@ -74,8 +74,8 @@ class AppUtility
             $this->string .= ($this->array['autoIncrement']) ? ' IDENTITY' : '';
         if (isset($this->array['allowNull']))
             $this->string .= ($this->array['allowNull']) ? ' NULL' : ' NOT NULL';
-        if (isset($this->array['defaultValue']))
-            $this->string .= (empty($this->array['defaultValue'])) ? '' : " DEFAULT \'{$this->array['defaultValue']}\'";
+        if (isset($this->array['defaultValue']) && isset($this->array['defaultValue']['expression']) )
+            $this->string .= (empty($this->array['defaultValue']['expression'])) ? '' : " DEFAULT \'{$this->array['defaultValue']['expression']}\'";
         if (isset($this->array['comment']))
             $this->string .= " COMMENT \'" . str_replace("'", "\\'", $this->array['comment']) . "\'";
 
@@ -118,8 +118,8 @@ class AppUtility
             $this->string .= ($this->array['allowNull']) ? ' NULL' : ' NOT NULL';
         if (isset($this->array['autoIncrement']))
             $this->string .= ($this->array['autoIncrement']) ? ' AUTOINCREMENT' : '';
-        if (isset($this->array['defaultValue']))
-            $this->string .= (empty($this->array['defaultValue'])) ? '' : " DEFAULT \'{$this->array['defaultValue']}\'";
+        if (isset($this->array['defaultValue']) && isset($this->array['defaultValue']['expression']) )
+            $this->string .= (empty($this->array['defaultValue']['expression'])) ? '' : " DEFAULT \'{$this->array['defaultValue']['expression']}\'";
         if (isset($this->array['comment']))
             $this->string .= " COMMENT \'" . str_replace("'", "\\'", $this->array['comment']) . "\'";
 
@@ -133,8 +133,8 @@ class AppUtility
             $this->string .= ($this->array['autoIncrement']) ? ' SERIAL' : '';
         if (isset($this->array['allowNull']))
             $this->string .= ($this->array['allowNull']) ? ' NULL' : ' NOT NULL';
-        if (isset($this->array['defaultValue']))
-            $this->string .= (empty($this->array['defaultValue'])) ? '' : " DEFAULT \'{$this->array['defaultValue']}\'";
+        if (isset($this->array['defaultValue']) && isset($this->array['defaultValue']['expression']) )
+            $this->string .= (empty($this->array['defaultValue']['expression'])) ? '' : " DEFAULT \'{$this->array['defaultValue']['expression']}\'";
         if (isset($this->array['comment']))
             $this->string .= " COMMENT \'" . str_replace("'", "\\'", $this->array['comment']) . "\'";
 
